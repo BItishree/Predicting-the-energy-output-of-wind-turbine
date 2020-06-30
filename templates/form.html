@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>my form</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+
+    <div class="jumbotron text-center text-white" style="background:grey">
+        <h1><b>Power Prediction</b></h1>
+    </div>
+
+    <form method="POST" class="img-thumbnail form-group w-50 m-auto p-4">
+        {% csrf_token %}
+
+        <div>
+           <center><label><b>Enter hours:</b></label> </center> <input type="number" name="number" class="form-control">
+        </div>
+        <br>
+
+
+        <input type="submit" class="btn-success form-control w-50 m-auto">
+
+    </form>
+</div>
+
+
+                    {% if r %}
+                <div class="w-50 m-auto text-center text-white" style="background:grey ">
+
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>power</th>
+                    </tr>
+                    </thead>
+
+                    {% for dt,lst in r %}
+
+                    <tr>
+                        <td>{{ dt }}</td>
+
+                        <td>{{ lst }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+
+
+                </div>
+
+                     {% endif %}
+
+
+</body>
+</html>
