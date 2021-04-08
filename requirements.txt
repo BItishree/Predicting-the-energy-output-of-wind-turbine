@@ -1,4 +1,4 @@
-Django==3.0.7
+Django==3.0.14
 grpcio==1.30.0
 h5py==2.10.0
 joblib==0.15.1
