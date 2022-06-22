@@ -4,7 +4,7 @@ h5py==2.10.0
 joblib==0.15.1
 Keras-Preprocessing==1.1.2
 matplotlib==3.2.2
-numpy==1.19.0
+numpy==1.22.0
 pandas==1.0.5
 pylint==2.4.4
 pyparsing==2.4.7
